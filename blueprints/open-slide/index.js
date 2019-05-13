@@ -14,5 +14,7 @@ module.exports = {
         'ember-cli-fastboot'
       ]
     })
-  }
+  },
+
+  filesToRemove: ['app/templates/application.hbs'],
 };
