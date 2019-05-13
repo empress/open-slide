@@ -3,6 +3,10 @@
 module.exports = {
   description: 'Default blueprint for OpenSlide',
 
+  normalizeEntityName() {
+    // no-op
+  },
+
   afterInstall() {
     return this.addAddonsToProject({
       packages: [
