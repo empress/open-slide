@@ -6,6 +6,14 @@ const { join } = require('path');
 module.exports = {
   name: require('./package').name,
 
+  config() {
+    return {
+      fastboot: {
+        hostWhitelist: [/localhost:\d+/]
+      },
+    }
+  },
+
   treeForPublic() {
     let appPrefix = join(this.project.configPath(), '../..');
 
