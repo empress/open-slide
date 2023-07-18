@@ -9,9 +9,9 @@ module.exports = {
   config() {
     return {
       fastboot: {
-        hostWhitelist: [/localhost:\d+/]
+        hostWhitelist: [/localhost:\d+/],
       },
-    }
+    };
   },
 
   treeForPublic() {
@@ -21,9 +21,9 @@ module.exports = {
       type: 'slide',
       contentFolder: 'slides',
       collate: true,
-      attributes: ['notes']
+      attributes: ['notes'],
     });
 
     return contentsJson;
-  }
+  },
 };
