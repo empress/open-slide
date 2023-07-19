@@ -116,8 +116,8 @@ devDependencies:
     specifier: ^4.7.0
     version: 4.7.0
   open-slide-reveal-template:
-    specifier: ^0.1.1
-    version: 0.1.1
+    specifier: github:empress/open-slide-reveal-template#update-deps
+    version: github.com/empress/open-slide-reveal-template/8590c14541bd77b53dc8d4e80957066e620a3764(ember-source@5.1.1)(webpack@5.88.1)
   prettier:
     specifier: ^2.8.8
     version: 2.8.8
@@ -1720,6 +1720,17 @@ packages:
       - supports-color
     dev: true
 
+  /@embroider/addon-shim@1.8.6:
+    resolution: {integrity: sha512-siC9kP78uucEbpDcVyxjkwa76pcs5rVzDVpWO4PDc9EAXRX+pzmUuSTLAK3GztUwx7/PWhz1BenAivqdSvSgfg==}
+    engines: {node: 12.* || 14.* || >= 16}
+    dependencies:
+      '@embroider/shared-internals': 2.2.3
+      broccoli-funnel: 3.0.8
+      semver: 7.5.4
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
   /@embroider/macros@1.12.3:
     resolution: {integrity: sha512-ZdgDo7ckNbZ0DxMgEmcX70PUNPqodKSkgifDoX3Ysf5P5LkpST/PV1E49GZTxv9p17+XwQ8j0JSf5yd7KY1f/w==}
     engines: {node: 12.* || 14.* || >= 16}
@@ -2773,6 +2784,11 @@ packages:
   /assign-symbols@1.0.0:
     resolution: {integrity: sha512-Q+JC7Whu8HhmTdBph/Tq59IoRtoy6KAm5zzPv00WdujX82lbAL8K7WVjne7vdCsAmbF4AYaDOPyO3k0kl8qIrw==}
     engines: {node: '>=0.10.0'}
+    dev: true
+
+  /ast-types@0.12.4:
+    resolution: {integrity: sha512-ky/YVYCbtVAS8TdMIaTiPFHwEpRB5z1hctepJplTr3UW5q8TDrpIMCILyk8pmLxGtn2KCtC/lSn7zOsaI7nzDw==}
+    engines: {node: '>=4'}
     dev: true
 
   /ast-types@0.13.3:
@@ -4859,18 +4875,6 @@ packages:
     resolution: {integrity: sha512-k47TDwcJ2zPideBCZE8sCiShSxQSpebY2BHcX2DdipMmBox5gsfyVrbKJWIHeSTTKyEUgmBIvQkqTOozEziCZA==}
     dev: true
 
-  /ember-cli-htmlbars@3.1.0:
-    resolution: {integrity: sha512-cgvRJM73IT0aePUG7oQ/afB7vSRBV3N0wu9BrWhHX2zkR7A7cUBI7KC9VPk6tbctCXoM7BRGsCC4aIjF7yrfXA==}
-    engines: {node: 6.* || 8.* || >= 10.*}
-    dependencies:
-      broccoli-persistent-filter: 2.3.1
-      hash-for-dep: 1.5.1
-      json-stable-stringify: 1.0.2
-      strip-bom: 3.0.0
-    transitivePeerDependencies:
-      - supports-color
-    dev: true
-
   /ember-cli-htmlbars@6.2.0:
     resolution: {integrity: sha512-j5EGixjGau23HrqRiW/JjoAovg5UBHfjbyN7wX5ekE90knIEqUUj1z/Mo/cTx/J2VepQ2lE6HdXW9LWQ/WdMtw==}
     engines: {node: 12.* || 14.* || >= 16}
@@ -5266,6 +5270,22 @@ packages:
       ember-cli-typescript: 2.0.2(@babel/core@7.22.9)
     transitivePeerDependencies:
       - '@babel/core'
+      - supports-color
+    dev: true
+
+  /ember-modifier@4.1.0(ember-source@5.1.1):
+    resolution: {integrity: sha512-YFCNpEYj6jdyy3EjslRb2ehNiDvaOrXTilR9+ngq+iUqSHYto2zKV0rleiA1XJQ27ELM1q8RihT29U6Lq5EyqQ==}
+    peerDependencies:
+      ember-source: '*'
+    peerDependenciesMeta:
+      ember-source:
+        optional: true
+    dependencies:
+      '@embroider/addon-shim': 1.8.6
+      ember-cli-normalize-entity-name: 1.0.0
+      ember-cli-string-utils: 1.1.0
+      ember-source: 5.1.1(@babel/core@7.22.9)(@glimmer/component@1.1.2)(rsvp@4.8.5)(webpack@5.88.1)
+    transitivePeerDependencies:
       - supports-color
     dev: true
 
@@ -8631,19 +8651,6 @@ packages:
       mimic-fn: 2.1.0
     dev: true
 
-  /open-slide-reveal-template@0.1.1:
-    resolution: {integrity: sha512-gZJiZVCT/FWP3y8MyPBdCUHNhvyciBQbqQP+Xh83Xkfef2jTjyiA6QbtbAV3F0WeMtI2hKP8HiqNY1ITEBM8jQ==}
-    engines: {node: 6.* || 8.* || >= 10.*}
-    dependencies:
-      broccoli-funnel: 2.0.2
-      broccoli-stew: 2.1.0
-      ember-cli-babel: 7.26.11
-      ember-cli-htmlbars: 3.1.0
-      reveal.js: 3.9.2
-    transitivePeerDependencies:
-      - supports-color
-    dev: true
-
   /optionator@0.9.3:
     resolution: {integrity: sha512-JjCoypp+jKn1ttEFExxhetCKeJt9zhAgAve5FXHixTvFDW/5aEktX9bufBKLRRMdU7bNtpLfcGu94B3cdEJgjg==}
     engines: {node: '>= 0.8.0'}
@@ -9229,6 +9236,16 @@ packages:
       util-deprecate: 1.0.2
     dev: true
 
+  /recast@0.17.6:
+    resolution: {integrity: sha512-yoQRMRrK1lszNtbkGyM4kN45AwylV5hMiuEveUBlxytUViWevjvX6w+tzJt1LH4cfUhWt4NZvy3ThIhu6+m5wQ==}
+    engines: {node: '>= 4'}
+    dependencies:
+      ast-types: 0.12.4
+      esprima: 4.0.1
+      private: 0.1.8
+      source-map: 0.6.1
+    dev: true
+
   /recast@0.18.10:
     resolution: {integrity: sha512-XNvYvkfdAN9QewbrxeTOjgINkdY/odTgTS56ZNEWL9Ml0weT4T3sFtvnTuF+Gxyu46ANcRm1ntrF6F5LAJPAaQ==}
     engines: {node: '>= 4'}
@@ -9491,9 +9508,9 @@ packages:
     engines: {iojs: '>=1.0.0', node: '>=0.10.0'}
     dev: true
 
-  /reveal.js@3.9.2:
-    resolution: {integrity: sha512-Dvv2oA9FrtOHE2DWj5js8pMRfwq++Wmvsn1EyAdYLC80lBjTphns+tPsB652Bnvep9AVviuVS/b4XoVY9rXHLA==}
-    engines: {node: '>=9.0.0'}
+  /reveal.js@4.5.0:
+    resolution: {integrity: sha512-Lx1hUWhJR7Y7ScQNyGt7TFzxeviDAswK2B0cn9RwbPZogTMRgS8+FTr+/12KNHOegjvWKH0H0EGwBARNDPTgWQ==}
+    engines: {node: '>=10.0.0'}
     dev: true
 
   /rimraf@2.6.3:
@@ -10189,11 +10206,6 @@ packages:
     engines: {node: '>=8'}
     dependencies:
       ansi-regex: 5.0.1
-    dev: true
-
-  /strip-bom@3.0.0:
-    resolution: {integrity: sha512-vavAMRXOgBVNF6nyEEmL3DBK19iRpDcoIwW+swQ+CbGiu7lju6t+JklA1MHweoWtadgt4ISVUsXLyDq34ddcwA==}
-    engines: {node: '>=4'}
     dev: true
 
   /strip-eof@1.0.0:
@@ -11329,4 +11341,29 @@ packages:
   /yocto-queue@1.0.0:
     resolution: {integrity: sha512-9bnSc/HEW2uRy67wc+T8UwauLuPJVn28jb+GtJY16iiKWyvmYJRXVT4UamsAEGQfPohgr2q4Tq0sQbQlxTfi1g==}
     engines: {node: '>=12.20'}
+    dev: true
+
+  github.com/empress/open-slide-reveal-template/8590c14541bd77b53dc8d4e80957066e620a3764(ember-source@5.1.1)(webpack@5.88.1):
+    resolution: {tarball: https://codeload.github.com/empress/open-slide-reveal-template/tar.gz/8590c14541bd77b53dc8d4e80957066e620a3764}
+    id: github.com/empress/open-slide-reveal-template/8590c14541bd77b53dc8d4e80957066e620a3764
+    name: open-slide-reveal-template
+    version: 0.1.4
+    engines: {node: 16.* || >= 18}
+    peerDependencies:
+      ember-source: '>= 4.0.0'
+    dependencies:
+      broccoli-funnel: 2.0.2
+      broccoli-merge-trees: 4.2.0
+      broccoli-stew: 2.1.0
+      ember-auto-import: 2.6.3(webpack@5.88.1)
+      ember-cli-babel: 7.26.11
+      ember-cli-htmlbars: 6.2.0
+      ember-modifier: 4.1.0(ember-source@5.1.1)
+      ember-source: 5.1.1(@babel/core@7.22.9)(@glimmer/component@1.1.2)(rsvp@4.8.5)(webpack@5.88.1)
+      recast: 0.17.6
+      reveal.js: 4.5.0
+    transitivePeerDependencies:
+      - '@glint/template'
+      - supports-color
+      - webpack
     dev: true
