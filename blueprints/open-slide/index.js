@@ -9,11 +9,8 @@ module.exports = {
 
   afterInstall() {
     return this.addAddonsToProject({
-      packages: [
-        'prember',
-        'ember-cli-fastboot'
-      ]
-    })
+      packages: ['prember', 'ember-cli-fastboot'],
+    });
   },
 
   filesToRemove: ['app/templates/application.hbs'],
